@@ -13,7 +13,7 @@ class HomeContentMobile extends StatelessWidget {
       children: <Widget>[
         ProfileSnippet(),
         SizedBox(height: 100),
-        PortfolioSnippet('See portfolio')
+        PortfolioSnippet('See Portfolio')
       ],
     );
   }
