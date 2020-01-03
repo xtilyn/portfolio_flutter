@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'views/home/home_view.dart';
+import 'package:flutter_portfolio/locator.dart';
+import 'package:flutter_portfolio/views/layout_template/layout_template.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  setupLocator();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -13,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Google Sans'),
       ),
-      home: HomeView(),
+      home: LayoutTemplate(),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/routing/route_names.dart';
 import 'package:flutter_portfolio/widgets/navigation_bar/navbar_item.dart';
 import 'package:flutter_portfolio/widgets/signature/signature.dart';
 
@@ -22,9 +23,9 @@ class NavigationBarTabletDesktop extends StatelessWidget {
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              NavBarItem('About'),
+              NavBarItem('About', AboutRoute),
               SizedBox(width: 50,),
-              NavBarItem('Contact')
+              NavBarItem('Contact', ContactRoute)
             ],
           )
         ],
