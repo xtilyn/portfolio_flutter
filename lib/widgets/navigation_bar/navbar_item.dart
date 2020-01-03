@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/services/navigation_service.dart';
-
-import '../../locator.dart';
 
 class NavBarItem extends StatelessWidget {
   final String title;
@@ -12,7 +9,7 @@ class NavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        locator<NavigationService>().navigateTo(navigationPath);
+        // Navigator.pushNamed(context, navigationPath);
       },
       child: Text(
         title,
