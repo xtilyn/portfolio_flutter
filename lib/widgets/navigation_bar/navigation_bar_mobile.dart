@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/widgets/navigation_bar/navbav_logo.dart';
+import 'package:flutter_portfolio/widgets/signature/signature.dart';
 
 class NavigationBarMobile extends StatelessWidget {
   const NavigationBarMobile({Key key}) : super(key: key);
@@ -16,7 +16,7 @@ class NavigationBarMobile extends StatelessWidget {
             icon: Icon(Icons.menu),
             onPressed: () {},
           ),
-          NavBarLogo()
+          Signature()
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/widgets/navigation_bar/navbar_item.dart';
+import 'package:flutter_portfolio/widgets/signature/signature.dart';
 
 class NavigationBarTabletDesktop extends StatelessWidget {
 
@@ -16,20 +17,7 @@ class NavigationBarTabletDesktop extends StatelessWidget {
           SizedBox(
             height: 80,
             width: 150,
-            child: Row(
-              children: <Widget>[
-                Text(
-                  'CA',
-                  style: TextStyle(
-                    fontSize: 30,
-                  )
-                ),
-                Icon(
-                  Icons.fiber_manual_record,
-                  color: Colors.blueGrey,
-                ),
-              ],
-            ),
+            child: Signature()
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
