@@ -9,7 +9,7 @@ class NavBarItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigator.pushNamed(context, navigationPath);
+        Navigator.pushNamed(context, navigationPath);
       },
       child: Text(
         title,

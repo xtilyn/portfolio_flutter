@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/routing/route_names.dart';
+import 'package:flutter_portfolio/views/about/about.dart';
+import 'package:flutter_portfolio/views/contact/contact.dart';
 import 'package:flutter_portfolio/views/home/home_view.dart';
-import 'package:flutter_portfolio/views/layout_template/layout_template.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +18,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Google Sans'),
       ),
-      home: LayoutTemplate(HomeView()),
+      initialRoute: HomeRoute,
+      routes: {
+        HomeRoute: (context) => HomeView(),
+        AboutRoute: (context) => AboutView(),
+        ContactRoute: (context) => ContactView()
+      },
     );
   }
 }
