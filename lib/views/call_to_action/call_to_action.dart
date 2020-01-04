@@ -5,14 +5,15 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 class CallToAction extends StatelessWidget {
 
+  final Function onTap;
   final String title;
-  CallToAction(this.title);
+  CallToAction(this.title, this.onTap);
 
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout(
-      mobile: CallToActionMobile(title),
-      tablet: CallToActionTabletDesktop(title),
+      mobile: CallToActionMobile(title, onTap),
+      tablet: CallToActionTabletDesktop(title, onTap),
     );
   }
 }

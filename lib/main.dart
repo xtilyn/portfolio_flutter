@@ -3,6 +3,7 @@ import 'package:flutter_portfolio/routing/route_names.dart';
 import 'package:flutter_portfolio/views/about/about.dart';
 import 'package:flutter_portfolio/views/contact/contact.dart';
 import 'package:flutter_portfolio/views/home/home_view.dart';
+import 'package:flutter_portfolio/views/portfolio/portfolio_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,7 +23,8 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeRoute: (context) => HomeView(),
         AboutRoute: (context) => AboutView(),
-        ContactRoute: (context) => ContactView()
+        ContactRoute: (context) => ContactView(),
+        PortfolioRoute: (context) => PortfolioView()
       },
     );
   }

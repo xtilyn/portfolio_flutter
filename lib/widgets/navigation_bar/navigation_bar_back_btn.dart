@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/utils/hand_cursor.dart';
 
 class NavigationBarBackBtn extends StatelessWidget {
   const NavigationBarBackBtn({Key key}) : super(key: key);
@@ -11,12 +12,16 @@ class NavigationBarBackBtn extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          IconButton(
-            iconSize: 50,
-            icon: Icon(Icons.arrow_back,),
-            onPressed: () {
-              Navigator.pop(context);
-            },
+          HandCursor(
+            child: IconButton(
+              iconSize: 50,
+              icon: Icon(
+                Icons.arrow_back,
+              ),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
           ),
         ],
       ),

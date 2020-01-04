@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/routing/route_names.dart';
+import 'package:flutter_portfolio/utils/hand_cursor.dart';
 import 'package:flutter_portfolio/widgets/navigation_bar/navbar_item.dart';
 import 'package:flutter_portfolio/widgets/signature/signature.dart';
 
@@ -18,14 +19,14 @@ class NavigationBarTabletDesktop extends StatelessWidget {
           SizedBox(
             height: 80,
             width: 150,
-            child: Signature()
+            child: HandCursor(child: Signature())
           ),
           Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-              NavBarItem('About', AboutRoute),
+              HandCursor(child: NavBarItem('About', AboutRoute)),
               SizedBox(width: 50,),
-              NavBarItem('Contact', ContactRoute)
+              HandCursor(child: NavBarItem('Contact', ContactRoute))
             ],
           )
         ],

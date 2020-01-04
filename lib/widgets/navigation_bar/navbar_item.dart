@@ -7,13 +7,16 @@ class NavBarItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         Navigator.pushNamed(context, navigationPath);
       },
-      child: Text(
-        title,
-        style: TextStyle(fontSize: 18),
+      child: Padding(
+        padding: const EdgeInsets.all(18),
+        child: Text(
+          title,
+          style: TextStyle(fontSize: 18),
+        ),
       ),
     );
   }
