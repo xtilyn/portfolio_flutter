@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/widgets/social_media/social_media.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class ProfileSnippet extends StatelessWidget {
@@ -7,19 +8,26 @@ class ProfileSnippet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(builder: (context, sizingInformation) {
+      final bool isMobile =
+          sizingInformation.deviceScreenType == DeviceScreenType.Mobile;
+
+      var titlePosition =
+          sizingInformation.deviceScreenType == DeviceScreenType.Desktop
+              ? MainAxisAlignment.start
+              : MainAxisAlignment.center;
+
       var textAlignment =
           sizingInformation.deviceScreenType == DeviceScreenType.Desktop
               ? TextAlign.left
               : TextAlign.center;
 
-      double titleSize =
-          sizingInformation.deviceScreenType == DeviceScreenType.Mobile
-              ? 50
-              : 80;
-      double descriptionSize =
-          sizingInformation.deviceScreenType == DeviceScreenType.Mobile
-              ? 16
-              : 21;
+      var imageSize =
+          sizingInformation.deviceScreenType == DeviceScreenType.Desktop
+              ? 100.0
+              : 70.0;
+
+      double titleSize = isMobile ? 40 : 70;
+      double descriptionSize = isMobile ? 16 : 21;
       return Container(
         width: 600,
         child: Column(
@@ -28,34 +36,53 @@ class ProfileSnippet extends StatelessWidget {
           children: <Widget>[
             Row(
               mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: titlePosition,
               children: <Widget>[
-                CircleAvatar(
-                    radius: 100,
-                    backgroundImage: AssetImage('assets/logo.png'),
-                  )
+                Row(
+                  children: <Widget>[
+                    CircleAvatar(
+                      radius: imageSize,
+                      backgroundImage: AssetImage('assets/logo.png'),
+                    ),
+                    SizedBox(width: 14,),
+                    Text(
+                      'CHRISTILYN\nARJONA',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w800,
+                        height: 0.9,
+                        fontSize: titleSize,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ],
+                )
               ],
             ),
-            SizedBox(height: 50,),
-            Text(
-              'CHRISTILYN\nARJONA',
-              style: TextStyle(
-                fontWeight: FontWeight.w800,
-                height: 0.9,
-                fontSize: titleSize,
+            SizedBox(
+              height: isMobile ? 15 : 30,
+            ),
+            Padding(
+              padding: EdgeInsets.all(isMobile ? 20 : 0),
+              child: Text(
+                'I\'m a Software Developer who specializes in Native Mobile App Development, UI/UX Design, and Front-end Web Development with React (and Flutter!).',
+                style: TextStyle(
+                  fontSize: descriptionSize,
+                  height: 1.7,
+                ),
+                textAlign: textAlignment,
               ),
-              textAlign: textAlignment,
             ),
             SizedBox(
-              height: 30,
+              height: isMobile ? 12 : 30 
             ),
-            Text(
-              'I\'m a Software Developer who specializes in Native Mobile App Development, UI/UX Design, and Front-end Web Development with React (and Flutter!).',
-              style: TextStyle(
-                fontSize: descriptionSize,
-                height: 1.7,
-              ),
-              textAlign: textAlignment,
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SocialMedia('Stack Overflow', 'https://stackoverflow.com/users/7881446/christilyn'),
+                SocialMedia('LinkedIn', 'https://www.linkedin.com/in/christilyn-arjona/'),
+                SocialMedia('GitHub', 'https://github.com/xtilyn')
+              ],
             )
           ],
         ),

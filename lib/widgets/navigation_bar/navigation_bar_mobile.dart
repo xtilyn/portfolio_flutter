@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/widgets/signature/signature.dart';
 
 class NavigationBarMobile extends StatelessWidget {
-  const NavigationBarMobile({Key key}) : super(key: key);
+  final GlobalKey<ScaffoldState> _scaffoldKey;
+  NavigationBarMobile(this._scaffoldKey);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +15,9 @@ class NavigationBarMobile extends StatelessWidget {
         children: <Widget>[
           IconButton(
             icon: Icon(Icons.menu),
-            onPressed: () {},
+            onPressed: () {
+              _scaffoldKey.currentState.openDrawer();
+            },
           ),
           Signature()
         ],

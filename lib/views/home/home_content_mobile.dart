@@ -12,6 +12,7 @@ class HomeContentMobile extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          SizedBox(height: 20),
           ProfileSnippet(),
           SizedBox(height: 100),
           PortfolioSnippet('See Portfolio')
