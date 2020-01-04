@@ -21,6 +21,7 @@ class HomeView extends StatelessWidget {
                 child: ScreenTypeLayout(
                   mobile: HomeContentMobile(),
                   desktop: HomeContentDesktop(),
+                  tablet: HomeContentMobile(),
                 ),
               )
             ],

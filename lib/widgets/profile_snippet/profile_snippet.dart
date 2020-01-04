@@ -31,14 +31,14 @@ class ProfileSnippet extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
                 CircleAvatar(
-                    radius: 150,
+                    radius: 100,
                     backgroundImage: AssetImage('assets/logo.png'),
                   )
               ],
             ),
             SizedBox(height: 50,),
             Text(
-              'FLUTTER WEB.\nTHE BASICS',
+              'CHRISTILYN\nARJONA',
               style: TextStyle(
                 fontWeight: FontWeight.w800,
                 height: 0.9,
@@ -50,7 +50,7 @@ class ProfileSnippet extends StatelessWidget {
               height: 30,
             ),
             Text(
-              'In this course we will go over the basics of using Flutter Web for website development. Topics will include Responsive Layout, Deploying, Font Changes, Hover Functionality, Modals and more.',
+              'I\'m a Software Developer who specializes in Native Mobile App Development, UI/UX Design, and Front-end Web Development with React (and Flutter!).',
               style: TextStyle(
                 fontSize: descriptionSize,
                 height: 1.7,

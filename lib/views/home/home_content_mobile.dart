@@ -7,14 +7,16 @@ class HomeContentMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.max,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        ProfileSnippet(),
-        SizedBox(height: 100),
-        PortfolioSnippet('See Portfolio')
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          ProfileSnippet(),
+          SizedBox(height: 100),
+          PortfolioSnippet('See Portfolio')
+        ],
+      ),
     );
   }
 }

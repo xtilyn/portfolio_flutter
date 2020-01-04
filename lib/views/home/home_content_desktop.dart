@@ -7,9 +7,17 @@ class HomeContentDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      ProfileSnippet(),
-      Expanded(child: Center(child: PortfolioSnippet('See Portfolio')))
-    ]);
+    return Center(
+      child: SingleChildScrollView(
+        child: Row(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ProfileSnippet(),
+              Expanded(child: Center(child: PortfolioSnippet('See Portfolio')))
+            ]),
+      ),
+    );
   }
 }
