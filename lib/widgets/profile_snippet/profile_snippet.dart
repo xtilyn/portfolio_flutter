@@ -16,14 +16,27 @@ class ProfileSnippet extends StatelessWidget {
           sizingInformation.deviceScreenType == DeviceScreenType.Mobile
               ? 50
               : 80;
-      double descriptionSize = sizingInformation.deviceScreenType == DeviceScreenType.Mobile ?
-      16 : 21;
+      double descriptionSize =
+          sizingInformation.deviceScreenType == DeviceScreenType.Mobile
+              ? 16
+              : 21;
       return Container(
         width: 600,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                CircleAvatar(
+                    radius: 150,
+                    backgroundImage: AssetImage('assets/logo.png'),
+                  )
+              ],
+            ),
+            SizedBox(height: 50,),
             Text(
               'FLUTTER WEB.\nTHE BASICS',
               style: TextStyle(
