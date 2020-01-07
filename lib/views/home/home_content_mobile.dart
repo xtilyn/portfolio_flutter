@@ -11,15 +11,18 @@ class HomeContentMobile extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         color: bgGray,
-        child: Column(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            SizedBox(height: 20),
-            ProfileSnippet(),
-            SizedBox(height: 100),
-            PortfolioSnippet('See Portfolio')
-          ],
+        child: Padding(
+          padding: EdgeInsets.all(8),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(height: 20),
+              ProfileSnippet(),
+              SizedBox(height: 100),
+              PortfolioSnippet('See Portfolio')
+            ],
+          ),
         ),
       ),
     );

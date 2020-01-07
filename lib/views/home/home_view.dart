@@ -30,20 +30,18 @@ class _HomeViewState extends State<HomeView> {
         )
       ],
     ));
-    final mobileView = Padding(
-        padding: EdgeInsets.all(8),
-        child: Column(
-          children: <Widget>[
-            NavigationBar(_scaffoldKey),
-            Expanded(
-              child: ScreenTypeLayout(
-                mobile: HomeContentMobile(),
-                desktop: HomeContentDesktop(),
-                tablet: HomeContentMobile(),
-              ),
-            )
-          ],
-        ));
+    final mobileView = Column(
+      children: <Widget>[
+        NavigationBar(_scaffoldKey),
+        Expanded(
+          child: ScreenTypeLayout(
+            mobile: HomeContentMobile(),
+            desktop: HomeContentDesktop(),
+            tablet: HomeContentMobile(),
+          ),
+        )
+      ],
+    );
 
     return ResponsiveBuilder(
       builder: (context, sizingInformation) => Scaffold(
