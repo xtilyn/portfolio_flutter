@@ -5,7 +5,8 @@ import 'package:url_launcher/url_launcher.dart';
 class SocialMedia extends StatelessWidget {
   final String link;
   final String title;
-  SocialMedia(this.title, this.link);
+  final String logoPath;
+  SocialMedia(this.title, this.link, this.logoPath);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,11 @@ class SocialMedia extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Icon(Icons.link),
+                Container(
+                  width: 20,
+                  height: 20,
+                  child: Image.asset(logoPath,)
+                  ),
                 SizedBox(width: 8,),
                 Text(title)
               ],

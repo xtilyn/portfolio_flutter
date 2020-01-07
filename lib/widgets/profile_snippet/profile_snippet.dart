@@ -79,9 +79,9 @@ class ProfileSnippet extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SocialMedia('Stack Overflow', 'https://stackoverflow.com/users/7881446/christilyn'),
-                SocialMedia('LinkedIn', 'https://www.linkedin.com/in/christilyn-arjona/'),
-                SocialMedia('GitHub', 'https://github.com/xtilyn')
+                SocialMedia('Stack Overflow', 'https://stackoverflow.com/users/7881446/christilyn', 'assets/stackoverflow_logo.png'),
+                SocialMedia('LinkedIn', 'https://www.linkedin.com/in/christilyn-arjona/', 'assets/linked_in_logo.jpg'),
+                SocialMedia('GitHub', 'https://github.com/xtilyn', 'assets/github_logo.png')
               ],
             )
           ],
