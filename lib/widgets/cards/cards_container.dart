@@ -101,7 +101,7 @@ class CardsContainer extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     color: Colors.blueAccent,
                                     borderRadius: BorderRadius.circular(20.0)),
-                                child: Text("Read Later",
+                                child: Text("Android App",
                                     style: TextStyle(color: Colors.white)),
                               ),
                             )

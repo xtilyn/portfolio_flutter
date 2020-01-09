@@ -17,7 +17,7 @@ class _PortfolioSnippetState extends State<PortfolioSnippet> {
   final String title;
   _PortfolioSnippetState(this.title);
   var currentPage = images.length - 1;
-  
+
   @override
   Widget build(BuildContext context) {
     PageController controller = PageController(initialPage: images.length - 1);
@@ -28,12 +28,12 @@ class _PortfolioSnippetState extends State<PortfolioSnippet> {
     });
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          Stack(
+        padding: const EdgeInsets.symmetric(horizontal: 60, vertical: 15),
+        child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              Stack(
                 children: <Widget>[
                   CardsContainer(currentPage),
                   Positioned.fill(
@@ -48,12 +48,12 @@ class _PortfolioSnippetState extends State<PortfolioSnippet> {
                   )
                 ],
               ),
-          SizedBox(height: 50,),
-          CallToAction(this.title, () {
-            Navigator.pushNamed(context, PortfolioRoute);
-          }),
-        ]
-      )
-    );
+              SizedBox(
+                height: 50,
+              ),
+              CallToAction(this.title, () {
+                Navigator.pushNamed(context, PortfolioRoute);
+              }),
+            ]));
   }
 }

@@ -44,7 +44,9 @@ class ProfileSnippet extends StatelessWidget {
                       radius: imageSize,
                       backgroundImage: AssetImage('assets/logo.png'),
                     ),
-                    SizedBox(width: 14,),
+                    SizedBox(
+                      width: 14,
+                    ),
                     Text(
                       'CHRISTILYN\nARJONA',
                       style: TextStyle(
@@ -72,17 +74,25 @@ class ProfileSnippet extends StatelessWidget {
                 textAlign: textAlignment,
               ),
             ),
-            SizedBox(
-              height: isMobile ? 12 : 30 
-            ),
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                SocialMedia('Stack Overflow', 'https://stackoverflow.com/users/7881446/christilyn', 'assets/stackoverflow_logo.png'),
-                SocialMedia('LinkedIn', 'https://www.linkedin.com/in/christilyn-arjona/', 'assets/linked_in_logo.jpg'),
-                SocialMedia('GitHub', 'https://github.com/xtilyn', 'assets/github_logo.png')
-              ],
+            SizedBox(height: isMobile ? 12 : 30),
+            Padding(
+              padding: EdgeInsets.only(left: 50, right: 50),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  SocialMedia(
+                      'Stack Overflow',
+                      'https://stackoverflow.com/users/7881446/christilyn',
+                      'assets/stackoverflow_logo.png'),
+                  SocialMedia(
+                      'LinkedIn',
+                      'https://www.linkedin.com/in/christilyn-arjona/',
+                      'assets/linked_in_logo.jpg'),
+                  SocialMedia('GitHub', 'https://github.com/xtilyn',
+                      'assets/github_logo.png')
+                ],
+              ),
             )
           ],
         ),
