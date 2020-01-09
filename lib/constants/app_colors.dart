@@ -3,3 +3,4 @@ import 'package:flutter/rendering.dart';
 
 const Color primaryColor = Color.fromARGB(255, 31, 229, 146);
 const Color bgGray = Color.fromARGB(255,245,245,245);
+const Color homeBg = Color.fromARGB(255, 245, 245, 245);

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/constants/app_colors.dart';
 import 'package:flutter_portfolio/widgets/portfolio_snippet/portfolio_snippet.dart';
 import 'package:flutter_portfolio/widgets/profile_snippet/profile_snippet.dart';
 
@@ -10,7 +9,6 @@ class HomeContentMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Container(
-        color: bgGray,
         child: Padding(
           padding: EdgeInsets.all(8),
           child: Column(

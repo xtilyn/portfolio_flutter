@@ -7,20 +7,26 @@ class NavigationBarMobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 80,
-      child: Row(
-        mainAxisSize: MainAxisSize.max,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          IconButton(
-            icon: Icon(Icons.menu),
-            onPressed: () {
-              _scaffoldKey.currentState.openDrawer();
-            },
-          ),
-          Signature()
-        ],
+    return Material(
+      elevation: 1,
+      child: Container(
+        height: 80,
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(left: 12),
+              child: IconButton(
+                icon: Icon(Icons.menu),
+                onPressed: () {
+                  _scaffoldKey.currentState.openDrawer();
+                },
+              ),
+            ),
+            Padding(padding: EdgeInsets.only(right: 12), child: Signature())
+          ],
+        ),
       ),
     );
   }

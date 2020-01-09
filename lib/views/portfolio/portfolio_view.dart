@@ -10,7 +10,7 @@ class PortfolioView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     MediaQueryData queryData = MediaQuery.of(context);
-    final width = 100.0;
+    final width = queryData.size.width;
     final height = queryData.size.height / 2;
 
     List<Widget> cards = new List();
@@ -18,9 +18,54 @@ class PortfolioView extends StatelessWidget {
       final card = Container(
         width: width,
         height: height,
-        child: Card(
-          child: Column(
-            children: <Widget>[Text(title[i])],
+        child: Padding(
+          padding: EdgeInsets.all(12.0),
+          child: Card(
+            elevation: 1,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0)),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Expanded(
+                    flex: 1,
+                    child: FittedBox(
+                      child: Image.asset(images[i]),
+                      fit: BoxFit.cover,
+                    )),
+                SizedBox(
+                  width: 18,
+                ),
+                Expanded(
+                  flex: 2,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      SizedBox(
+                        height: 100,
+                      ),
+                      Text(
+                        title[i],
+                        style: TextStyle(
+                          fontSize: 28,
+                          fontWeight: FontWeight.w800
+                        ),
+                      ),
+                      SizedBox(
+                        height: 4,
+                      ),
+                      Text(
+                        'hi',
+                        style: TextStyle(
+                          fontSize: 28,
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       );

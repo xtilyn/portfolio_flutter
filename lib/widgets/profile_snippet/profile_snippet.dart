@@ -21,10 +21,7 @@ class ProfileSnippet extends StatelessWidget {
               ? TextAlign.left
               : TextAlign.center;
 
-      var imageSize =
-          sizingInformation.deviceScreenType == DeviceScreenType.Desktop
-              ? 100.0
-              : 70.0;
+      var imageSize = 100.0;
 
       double titleSize = isMobile ? 40 : 70;
       double descriptionSize = isMobile ? 16 : 21;
@@ -40,30 +37,51 @@ class ProfileSnippet extends StatelessWidget {
               mainAxisSize: MainAxisSize.max,
               mainAxisAlignment: titlePosition,
               children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    CircleAvatar(
-                      radius: imageSize,
-                      backgroundImage: AssetImage('assets/logo.png'),
-                    ),
-                    SizedBox(
-                      width: 14,
-                    ),
-                    Text(
-                      'CHRISTILYN\nARJONA',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w800,
-                        height: 0.9,
-                        fontSize: titleSize,
-                      ),
-                      textAlign: TextAlign.start,
-                    ),
-                  ],
-                )
+                isMobile
+                    ? Column(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: imageSize,
+                            backgroundImage: AssetImage('assets/logo.png'),
+                          ),
+                          SizedBox(
+                            height: 18,
+                          ),
+                          Text(
+                            'CHRISTILYN\nARJONA',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              height: 0.9,
+                              fontSize: titleSize,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      )
+                    : Row(
+                        children: <Widget>[
+                          CircleAvatar(
+                            radius: imageSize,
+                            backgroundImage: AssetImage('assets/logo.png'),
+                          ),
+                          SizedBox(
+                            width: 14,
+                          ),
+                          Text(
+                            'CHRISTILYN\nARJONA',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              height: 0.9,
+                              fontSize: titleSize,
+                            ),
+                            textAlign: TextAlign.start,
+                          ),
+                        ],
+                      )
               ],
             ),
             SizedBox(
-              height: isMobile ? 15 : 30,
+              height: isMobile ? 5 : 30,
             ),
             Padding(
               padding: EdgeInsets.all(isMobile ? 20 : 0),
@@ -87,18 +105,14 @@ class ProfileSnippet extends StatelessWidget {
                       'Stack Overflow',
                       'https://stackoverflow.com/users/7881446/christilyn',
                       'assets/stackoverflow_logo.png',
-                      socialMediaFontSize
-                      ),
+                      socialMediaFontSize),
                   SocialMedia(
                       'LinkedIn',
                       'https://www.linkedin.com/in/christilyn-arjona/',
                       'assets/linked_in_logo.jpg',
-                      socialMediaFontSize
-                      ),
+                      socialMediaFontSize),
                   SocialMedia('GitHub', 'https://github.com/xtilyn',
-                      'assets/github_logo.png',
-                      socialMediaFontSize
-                      )
+                      'assets/github_logo.png', socialMediaFontSize)
                 ],
               ),
             )
