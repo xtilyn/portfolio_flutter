@@ -28,6 +28,8 @@ class ProfileSnippet extends StatelessWidget {
 
       double titleSize = isMobile ? 40 : 70;
       double descriptionSize = isMobile ? 16 : 21;
+      double socialMediaFontSize = isMobile ? 12 : 16;
+
       return Container(
         width: 600,
         child: Column(
@@ -84,13 +86,19 @@ class ProfileSnippet extends StatelessWidget {
                   SocialMedia(
                       'Stack Overflow',
                       'https://stackoverflow.com/users/7881446/christilyn',
-                      'assets/stackoverflow_logo.png'),
+                      'assets/stackoverflow_logo.png',
+                      socialMediaFontSize
+                      ),
                   SocialMedia(
                       'LinkedIn',
                       'https://www.linkedin.com/in/christilyn-arjona/',
-                      'assets/linked_in_logo.jpg'),
+                      'assets/linked_in_logo.jpg',
+                      socialMediaFontSize
+                      ),
                   SocialMedia('GitHub', 'https://github.com/xtilyn',
-                      'assets/github_logo.png')
+                      'assets/github_logo.png',
+                      socialMediaFontSize
+                      )
                 ],
               ),
             )

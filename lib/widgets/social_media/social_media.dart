@@ -7,7 +7,8 @@ class SocialMedia extends StatelessWidget {
   final String link;
   final String title;
   final String logoPath;
-  SocialMedia(this.title, this.link, this.logoPath);
+  final double fontSize;
+  SocialMedia(this.title, this.link, this.logoPath, this.fontSize);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,13 @@ class SocialMedia extends StatelessWidget {
                 SizedBox(
                   width: 8,
                 ),
-                Text(title)
+                Flexible(
+                  child: Text(
+                    title, 
+                    style: TextStyle(fontSize: this.fontSize),
+                    textAlign: TextAlign.center,
+                    ),
+                )
               ],
             ),
           ),
