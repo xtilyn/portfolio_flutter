@@ -11,7 +11,7 @@ class ContactView extends StatelessWidget {
     final desktopView = CenteredView(
       child: Column(
         children: <Widget>[
-          NavigationBarBackBtn(),
+          NavigationBarBackBtn('Contact'),
           Center(
             child: Text('Contact View'),
           )
@@ -22,7 +22,7 @@ class ContactView extends StatelessWidget {
       padding: EdgeInsets.all(12),
       child: Column(
         children: <Widget>[
-          NavigationBarBackBtn(),
+          NavigationBarBackBtn('Contact'),
           Center(
             child: Text('Contact View'),
           )

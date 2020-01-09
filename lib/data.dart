@@ -14,14 +14,6 @@ List<String> title = [
 
 List<PortfolioItem> portfolioItems = [
   const PortfolioItem(
-    'Localodge',
-    'Android App', 
-    'A local classifieds app', 
-    'assets/apps/localodge.png',
-    ['Firebase', 'Kotlin', 'Algolia'],
-    ''
-    ),
-  const PortfolioItem(
     'Neuwly', 
     'Android App', 
     'A social media application that features in-app messaging, augmented reality, event booking, text and media posts among users, and geo search.', 
@@ -76,7 +68,15 @@ List<PortfolioItem> portfolioItems = [
     'assets/apps/mafia.png',
     ['Firebase', 'Kotlin', 'Algolia'],
     'https://github.com/elvinlimpin/Mafia',
-    )
+    ),
+    const PortfolioItem(
+      'Localodge',
+      'Android App', 
+      'A local classifieds app', 
+      'assets/apps/localodge.png',
+      ['Firebase', 'Kotlin', 'Algolia'],
+      ''
+    ),
 ];
 
 class PortfolioItem {

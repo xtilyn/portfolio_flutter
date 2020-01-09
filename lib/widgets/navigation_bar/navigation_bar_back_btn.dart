@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/utils/hand_cursor.dart';
 
 class NavigationBarBackBtn extends StatelessWidget {
-  const NavigationBarBackBtn({Key key}) : super(key: key);
+  final String title;
+  const NavigationBarBackBtn(this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +12,7 @@ class NavigationBarBackBtn extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           HandCursor(
             child: IconButton(
@@ -23,6 +25,16 @@ class NavigationBarBackBtn extends StatelessWidget {
               },
             ),
           ),
+          Expanded(
+            flex: 1,
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 42,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          )
         ],
       ),
     );

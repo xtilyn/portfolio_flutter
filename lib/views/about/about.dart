@@ -11,7 +11,7 @@ class AboutView extends StatelessWidget {
     final desktopView = CenteredView(
       child: Column(
         children: <Widget>[
-          NavigationBarBackBtn(),
+          NavigationBarBackBtn('About'),
           Center(
             child: Text('About View'),
           )
@@ -22,7 +22,7 @@ class AboutView extends StatelessWidget {
       padding: EdgeInsets.all(12),
       child: Column(
         children: <Widget>[
-          NavigationBarBackBtn(),
+          NavigationBarBackBtn('About'),
           Center(
             child: Text('About View'),
           )

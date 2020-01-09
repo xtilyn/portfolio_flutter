@@ -65,7 +65,7 @@ class PortfolioContentMobile extends StatelessWidget {
         body: Padding(
           padding: EdgeInsets.all(12),
           child: Column(
-            children: <Widget>[NavigationBarBackBtn(), listContent],
+            children: <Widget>[NavigationBarBackBtn('Portfolio'), listContent],
           ),
         ));
   }

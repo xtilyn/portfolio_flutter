@@ -31,7 +31,10 @@ class PortfolioContentDesktop extends StatelessWidget {
                       EdgeInsets.only(left: 8, top: 4, right: 8, bottom: 4),
                   child: Text(
                     tagName,
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16
+                      ),
                   )),
             ));
         tags[j] = tagItem;
@@ -67,9 +70,6 @@ class PortfolioContentDesktop extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
-                            SizedBox(
-                              height: 18,
-                            ),
                             FlatButton(
                               padding: EdgeInsets.all(0),
                               onPressed: () {
@@ -108,7 +108,7 @@ class PortfolioContentDesktop extends StatelessWidget {
                                   style: TextStyle(fontSize: 22)),
                             ),
                             SizedBox(
-                              height: 50,
+                              height: 80,
                             ),
                             Wrap(
                               children: tags,
@@ -151,7 +151,7 @@ class PortfolioContentDesktop extends StatelessWidget {
         backgroundColor: Colors.white,
         body: CenteredView(
           child: Column(
-            children: <Widget>[NavigationBarBackBtn(), listContent],
+            children: <Widget>[NavigationBarBackBtn('Portfolio'), listContent],
           ),
         ));
   }
