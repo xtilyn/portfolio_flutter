@@ -2,6 +2,7 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/data.dart';
 import 'package:flutter_portfolio/utils/hand_cursor.dart';
+import 'package:flutter_portfolio/widgets/cards/back_card_content.dart';
 import 'package:flutter_portfolio/widgets/centered_view/centered_view.dart';
 import 'package:flutter_portfolio/widgets/navigation_bar/navigation_bar_back_btn.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -121,21 +122,7 @@ class PortfolioContentDesktop extends StatelessWidget {
             ),
           ),
         ),
-        back: Container(
-          width: width,
-          height: height,
-          child: HandCursor(
-            child: Padding(
-              padding: EdgeInsets.all(12.0),
-              child: Card(
-                elevation: 1,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12.0)),
-                child: Row(),
-              ),
-            ),
-          ),
-        ),
+        back: BackCardContent(width, height, portfolioItems[i]),
       );
       cards.add(card);
     }
