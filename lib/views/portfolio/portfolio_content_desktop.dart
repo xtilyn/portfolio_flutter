@@ -5,6 +5,7 @@ import 'package:flutter_portfolio/utils/hand_cursor.dart';
 import 'package:flutter_portfolio/widgets/cards/back_card_content.dart';
 import 'package:flutter_portfolio/widgets/centered_view/centered_view.dart';
 import 'package:flutter_portfolio/widgets/navigation_bar/navigation_bar_back_btn.dart';
+import 'package:flutter_portfolio/widgets/tags/tags.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PortfolioContentDesktop extends StatelessWidget {
@@ -21,23 +22,7 @@ class PortfolioContentDesktop extends StatelessWidget {
       final tags = new List<Widget>(portfolioItems[i].tags.length);
       for (int j = 0; j < portfolioItems[i].tags.length; j++) {
         final tagName = portfolioItems[i].tags[j];
-        final tagItem = Padding(
-            padding: EdgeInsets.only(left: 4, top: 4),
-            child: Material(
-              color: Colors.blueGrey,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(4)),
-              child: Padding(
-                  padding:
-                      EdgeInsets.only(left: 8, top: 4, right: 8, bottom: 4),
-                  child: Text(
-                    tagName,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16
-                      ),
-                  )),
-            ));
+        final tagItem = Tag(tagName);
         tags[j] = tagItem;
       }
 
