@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/data.dart';
 import 'package:flutter_portfolio/utils/hand_cursor.dart';
 
-class BackCardContent extends StatelessWidget {
+class BackCardContentDesktop extends StatelessWidget {
   final double width;
   final double height;
   final PortfolioItem portfolioItem;
-  const BackCardContent(this.width, this.height, this.portfolioItem);
+  const BackCardContentDesktop(this.width, this.height, this.portfolioItem);
 
   @override
   Widget build(BuildContext context) {

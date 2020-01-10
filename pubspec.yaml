@@ -55,6 +55,8 @@ flutter:
    - assets/github_logo.png
    - assets/linked_in_logo.jpg
    - assets/stackoverflow_logo.png
+   - assets/apps/neuwly/neuwly_1.webp
+   - assets/apps/teampics/teampics_1.webp
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

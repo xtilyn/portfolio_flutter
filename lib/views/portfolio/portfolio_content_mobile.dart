@@ -1,6 +1,6 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/widgets/cards/back_card_content.dart';
+import 'package:flutter_portfolio/widgets/cards/back_card_content_desktop.dart';
 import 'package:flutter_portfolio/widgets/navigation_bar/navigation_bar_back_btn.dart';
 import 'package:flutter_portfolio/widgets/tags/tags.dart';
 
@@ -73,7 +73,7 @@ class PortfolioContentMobile extends StatelessWidget {
                     ),
                   ),
                 ),
-                back: BackCardContent(width, height, portfolioItems[i]))),
+                back: BackCardContentDesktop(width, height, portfolioItems[i]))),
       );
       cards.add(card);
     }
