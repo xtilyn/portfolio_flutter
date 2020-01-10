@@ -10,6 +10,9 @@ class BackCardContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // print('width: '+width.toString()+', height: '+height.toString());
+    final bool isMobile = width < 600;
+    final double fontSize = isMobile ? 18 : 22;
     return Container(
       width: width,
       height: height,
@@ -27,15 +30,20 @@ class BackCardContent extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     'Project Length: ' + portfolioItem.projectLength,
-                    style: TextStyle(fontSize: 22),
+                    style: TextStyle(fontSize: fontSize),
                   ),
                   SizedBox(
                     height: 12,
                   ),
-                  Text(
-                    'Associated with: ' + portfolioItem.associatedWith,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 22),
+                  Padding(
+                    padding: isMobile
+                        ? EdgeInsets.only(left: 50, right: 50)
+                        : EdgeInsets.all(0),
+                    child: Text(
+                      'Associated with: ' + portfolioItem.associatedWith,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: fontSize),
+                    ),
                   ),
                   SizedBox(
                     height: 50,
@@ -44,10 +52,12 @@ class BackCardContent extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Icon(Icons.copyright),
-                      SizedBox(width: 4,),
+                      SizedBox(
+                        width: 4,
+                      ),
                       Text(
                         portfolioItem.year,
-                        style: TextStyle(fontSize: 22),
+                        style: TextStyle(fontSize: fontSize),
                       ),
                     ],
                   ),
