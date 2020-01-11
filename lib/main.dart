@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/routing/route_names.dart';
-import 'package:flutter_portfolio/views/about/about.dart';
+import 'package:flutter_portfolio/views/about/about_view.dart';
 import 'package:flutter_portfolio/views/contact/contact.dart';
 import 'package:flutter_portfolio/views/home/home_view.dart';
 import 'package:flutter_portfolio/views/portfolio/portfolio_view.dart';
